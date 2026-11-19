@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t d">
+<title id="t">Public and private keys</title>
+<desc id="d">The server keeps its private key and shares its public key with everyone. Encrypt with public, decrypt with private; sign with private, verify with public. Asymmetric crypto is slow, symmetric is fast.</desc>
+<style>
+text{font-family:'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;fill:#e6edf7}
+.mono{font-family:'Cascadia Code', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace}
+.muted{fill:#8fa3c0}
+.h1{font-size:34px;font-weight:700}
+.sub{font-size:18px;fill:#8fa3c0}
+.h2{font-size:20px;font-weight:600}
+.lbl{font-size:16px}
+.sm{font-size:14px}
+.xs{font-size:12.5px}
+.b{font-weight:700}
+
+@media (prefers-reduced-motion: reduce){ *{animation:none !important} }
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#0b1730"/><stop offset="1" stop-color="#132a50"/>
+</linearGradient>
+<symbol id="i-browser" viewBox="0 0 64 48">
+  <rect x="2" y="2" width="60" height="44" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <line x1="2" y1="14" x2="62" y2="14" stroke="currentColor" stroke-width="3"/>
+  <circle cx="10" cy="8" r="2.2" fill="currentColor"/><circle cx="17" cy="8" r="2.2" fill="currentColor"/><circle cx="24" cy="8" r="2.2" fill="currentColor"/>
+  <rect x="12" y="22" width="40" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+  <rect x="12" y="34" width="24" height="6" rx="3" fill="currentColor" opacity=".6"/>
+</symbol>
+<symbol id="i-server" viewBox="0 0 48 64">
+  <g fill="#132c52" stroke="currentColor" stroke-width="3">
+    <rect x="2" y="2" width="44" height="18" rx="4"/><rect x="2" y="23" width="44" height="18" rx="4"/><rect x="2" y="44" width="44" height="18" rx="4"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="11" cy="11" r="2.5"/><circle cx="11" cy="32" r="2.5"/><circle cx="11" cy="53" r="2.5"/>
+    <rect x="20" y="9.5" width="18" height="3" rx="1.5"/><rect x="20" y="30.5" width="18" height="3" rx="1.5"/><rect x="20" y="51.5" width="18" height="3" rx="1.5"/>
+  </g>
+</symbol>
+<symbol id="i-router" viewBox="0 0 64 44">
+  <line x1="16" y1="18" x2="10" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="48" y1="18" x2="54" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <rect x="2" y="18" width="60" height="24" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><circle cx="14" cy="30" r="2.5"/><circle cx="23" cy="30" r="2.5"/><circle cx="32" cy="30" r="2.5"/></g>
+</symbol>
+<symbol id="i-cloud" viewBox="0 0 72 46">
+  <path d="M18 43h37a14 14 0 0 0 2-28 20 20 0 0 0-38-3A15.5 15.5 0 0 0 18 43z" fill="#132c52" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+</symbol>
+<symbol id="i-eye" viewBox="0 0 56 32">
+  <path d="M2 16C12 3 44 3 54 16 44 29 12 29 2 16z" fill="#2a0f1a" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="28" cy="16" r="8" fill="currentColor"/><circle cx="28" cy="16" r="3.5" fill="#0b1730"/>
+</symbol>
+<symbol id="i-key" viewBox="0 0 64 28">
+  <circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="5"/>
+  <rect x="23" y="11" width="39" height="6" rx="2" fill="currentColor"/>
+  <rect x="45" y="16" width="5" height="9" rx="1" fill="currentColor"/><rect x="54" y="16" width="5" height="7" rx="1" fill="currentColor"/>
+</symbol>
+<symbol id="i-lock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 16 0v6" fill="none" stroke="currentColor" stroke-width="4"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-unlock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 15.5-2.8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-cert" viewBox="0 0 48 58">
+  <rect x="2" y="2" width="44" height="40" rx="4" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><rect x="9" y="10" width="30" height="3" rx="1.5"/><rect x="9" y="17" width="22" height="3" rx="1.5"/><rect x="9" y="24" width="26" height="3" rx="1.5"/></g>
+  <circle cx="34" cy="40" r="8" fill="currentColor"/>
+  <path d="M29 46l-3 11 8-4 8 4-3-11" fill="currentColor"/>
+</symbol>
+<symbol id="i-check" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="11" fill="currentColor" opacity=".18"/>
+  <path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<marker id="a-c" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4aa3ff"/></marker>
+<marker id="a-s" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2dd4bf"/></marker>
+<marker id="a-m" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8fa3c0"/></marker>
+<marker id="a-y" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+<marker id="a-p" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a3e635"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f43f5e"/></marker>
+<marker id="a-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#22c55e"/></marker>
+<marker id="a-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fb923c"/></marker>
+</defs>
+<rect width="1200" height="675" rx="24" fill="url(#bg)"/>
+<text x="48" y="64" class="h1" text-anchor="start" >Asymmetric keys: a public key and a private key</text><text x="48" y="96" class="sub" text-anchor="start" >What one key locks, only the other key can open.</text><rect x="820" y="130" width="330" height="300" rx="16" fill="#0f2343" stroke="#2dd4bf" stroke-width="2" /><use href="#i-server" x="850" y="160" width="50" height="66" style="color:#2dd4bf" /><text x="920" y="190" class="h2" text-anchor="start" style="fill:#2dd4bf" >Bank server</text><text x="920" y="214" class="sm" text-anchor="start" style="fill:#8fa3c0" >owns the key pair</text><rect x="845" y="250" width="280" height="70" rx="12" fill="#2b1a0c" stroke="#fb923c" stroke-width="2" /><use href="#i-key" x="860" y="271" width="64" height="28" style="color:#fb923c" /><text x="940" y="280" class="lbl b" text-anchor="start" style="fill:#fb923c" >Private key</text><text x="940" y="302" class="xs" text-anchor="start" style="fill:#8fa3c0" >never leaves the server</text><rect x="845" y="335" width="280" height="70" rx="12" fill="#1b2a0c" stroke="#a3e635" stroke-width="2" /><use href="#i-key" x="860" y="356" width="64" height="28" style="color:#a3e635" /><text x="940" y="365" class="lbl b" text-anchor="start" style="fill:#a3e635" >Public key</text><text x="940" y="387" class="xs" text-anchor="start" style="fill:#8fa3c0" >shared with everyone</text><rect x="60" y="150" width="300" height="70" rx="12" fill="#0f2343" stroke="#4aa3ff" stroke-width="1.5" /><use href="#i-key" x="78" y="171" width="58" height="26" style="color:#a3e635" /><text x="150" y="182" class="lbl b" text-anchor="start" style="fill:#4aa3ff" >Your browser</text><text x="150" y="204" class="xs" text-anchor="start" style="fill:#8fa3c0" >has a copy of the public key</text><path d="M820 370 C 600 370, 560 185, 365 185" fill="none" stroke="#a3e635" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#a-p)"/><rect x="60" y="245" width="300" height="70" rx="12" fill="#0f2343" stroke="#8fa3c0" stroke-width="1.5" /><use href="#i-key" x="78" y="266" width="58" height="26" style="color:#a3e635" /><text x="150" y="277" class="lbl b" text-anchor="start" style="fill:#8fa3c0" >Any other visitor</text><text x="150" y="299" class="xs" text-anchor="start" style="fill:#8fa3c0" >has a copy of the public key</text><path d="M820 370 C 600 370, 560 280, 365 280" fill="none" stroke="#a3e635" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#a-p)"/><rect x="60" y="340" width="300" height="70" rx="12" fill="#0f2343" stroke="#f43f5e" stroke-width="1.5" /><use href="#i-key" x="78" y="361" width="58" height="26" style="color:#a3e635" /><text x="150" y="372" class="lbl b" text-anchor="start" style="fill:#f43f5e" >Even the attacker</text><text x="150" y="394" class="xs" text-anchor="start" style="fill:#8fa3c0" >has a copy of the public key</text><path d="M820 370 C 600 370, 560 375, 365 375" fill="none" stroke="#a3e635" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#a-p)"/><rect x="60" y="455" width="520" height="150" rx="14" fill="#0f2343" stroke="#2f4c7a" stroke-width="1.5" /><text x="84" y="488" class="h2" text-anchor="start" >Two rules</text><text x="84" y="520" class="sm b" text-anchor="start" style="fill:#a3e635" >Encrypt with the public key</text><text x="320" y="520" class="sm" text-anchor="start" >only the private key decrypts</text><text x="84" y="550" class="sm b" text-anchor="start" style="fill:#fb923c" >Sign with the private key</text><text x="320" y="550" class="sm" text-anchor="start" >anyone can verify with public</text><text x="84" y="584" class="xs" text-anchor="start" style="fill:#8fa3c0" >TLS 1.3 uses the server key pair to SIGN, i.e. prove identity.</text><rect x="620" y="455" width="530" height="150" rx="14" fill="#0f2343" stroke="#2f4c7a" stroke-width="1.5" /><text x="644" y="488" class="h2" text-anchor="start" >The catch: speed</text><text x="644" y="522" class="sm" text-anchor="start" style="fill:#8fa3c0" >Asymmetric (RSA, ECDSA)</text><rect x="850" y="510" width="60" height="16" rx="8" fill="#fb923c"/><text x="920" y="523" class="sm b" text-anchor="start" style="fill:#fb923c" >slow</text><text x="644" y="556" class="sm" text-anchor="start" style="fill:#8fa3c0" >Symmetric (AES-GCM)</text><rect x="850" y="544" width="270" height="16" rx="8" fill="#fbbf24"/><text x="1110" y="557" class="xs b" text-anchor="end" style="fill:#2b230c" >fast</text><text x="644" y="590" class="xs" text-anchor="start" style="fill:#8fa3c0" >So TLS uses asymmetric crypto only during the handshake.</text><text x="600" y="645" class="xs" text-anchor="middle" style="fill:#8fa3c0" >Bar lengths are illustrative, not a benchmark.</text>
+</svg>

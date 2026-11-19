@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t d">
+<title id="t">The symmetric key distribution problem</title>
+<desc id="d">Animated: the browser creates a symmetric key and sends a copy to the server over the network; an attacker copies it and decrypts the password that follows.</desc>
+<style>
+text{font-family:'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;fill:#e6edf7}
+.mono{font-family:'Cascadia Code', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace}
+.muted{fill:#8fa3c0}
+.h1{font-size:34px;font-weight:700}
+.sub{font-size:18px;fill:#8fa3c0}
+.h2{font-size:20px;font-weight:600}
+.lbl{font-size:16px}
+.sm{font-size:14px}
+.xs{font-size:12.5px}
+.b{font-weight:700}
+@keyframes k0{0%,2%{opacity:0;transform:translate(0,10px)}8%,95%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+@keyframes kmove{0%,10%{transform:translateX(0);opacity:0}12%{opacity:1}38%{transform:translateX(720px);opacity:1}40%,95%{transform:translateX(720px);opacity:1}100%{opacity:0}}
+@keyframes steal{0%,22%{opacity:0;transform:translate(0,10px)}26%,95%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+@keyframes pmove{0%,44%{transform:translateX(0);opacity:0}46%{opacity:1}72%{transform:translateX(560px);opacity:1}74%,95%{transform:translateX(560px);opacity:1}100%{opacity:0}}
+@keyframes bub{0%,58%{opacity:0;transform:translate(0,10px)}62%,95%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+.k0{animation:k0 11s infinite} .km{animation:kmove 11s linear infinite;transform:translateX(720px)}.st{animation:steal 11s infinite} .pm{animation:pmove 11s linear infinite;transform:translateX(560px)} .bb{animation:bub 11s infinite}
+@media (prefers-reduced-motion: reduce){ *{animation:none !important} }
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#0b1730"/><stop offset="1" stop-color="#132a50"/>
+</linearGradient>
+<symbol id="i-browser" viewBox="0 0 64 48">
+  <rect x="2" y="2" width="60" height="44" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <line x1="2" y1="14" x2="62" y2="14" stroke="currentColor" stroke-width="3"/>
+  <circle cx="10" cy="8" r="2.2" fill="currentColor"/><circle cx="17" cy="8" r="2.2" fill="currentColor"/><circle cx="24" cy="8" r="2.2" fill="currentColor"/>
+  <rect x="12" y="22" width="40" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+  <rect x="12" y="34" width="24" height="6" rx="3" fill="currentColor" opacity=".6"/>
+</symbol>
+<symbol id="i-server" viewBox="0 0 48 64">
+  <g fill="#132c52" stroke="currentColor" stroke-width="3">
+    <rect x="2" y="2" width="44" height="18" rx="4"/><rect x="2" y="23" width="44" height="18" rx="4"/><rect x="2" y="44" width="44" height="18" rx="4"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="11" cy="11" r="2.5"/><circle cx="11" cy="32" r="2.5"/><circle cx="11" cy="53" r="2.5"/>
+    <rect x="20" y="9.5" width="18" height="3" rx="1.5"/><rect x="20" y="30.5" width="18" height="3" rx="1.5"/><rect x="20" y="51.5" width="18" height="3" rx="1.5"/>
+  </g>
+</symbol>
+<symbol id="i-router" viewBox="0 0 64 44">
+  <line x1="16" y1="18" x2="10" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="48" y1="18" x2="54" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <rect x="2" y="18" width="60" height="24" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><circle cx="14" cy="30" r="2.5"/><circle cx="23" cy="30" r="2.5"/><circle cx="32" cy="30" r="2.5"/></g>
+</symbol>
+<symbol id="i-cloud" viewBox="0 0 72 46">
+  <path d="M18 43h37a14 14 0 0 0 2-28 20 20 0 0 0-38-3A15.5 15.5 0 0 0 18 43z" fill="#132c52" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+</symbol>
+<symbol id="i-eye" viewBox="0 0 56 32">
+  <path d="M2 16C12 3 44 3 54 16 44 29 12 29 2 16z" fill="#2a0f1a" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="28" cy="16" r="8" fill="currentColor"/><circle cx="28" cy="16" r="3.5" fill="#0b1730"/>
+</symbol>
+<symbol id="i-key" viewBox="0 0 64 28">
+  <circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="5"/>
+  <rect x="23" y="11" width="39" height="6" rx="2" fill="currentColor"/>
+  <rect x="45" y="16" width="5" height="9" rx="1" fill="currentColor"/><rect x="54" y="16" width="5" height="7" rx="1" fill="currentColor"/>
+</symbol>
+<symbol id="i-lock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 16 0v6" fill="none" stroke="currentColor" stroke-width="4"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-unlock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 15.5-2.8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-cert" viewBox="0 0 48 58">
+  <rect x="2" y="2" width="44" height="40" rx="4" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><rect x="9" y="10" width="30" height="3" rx="1.5"/><rect x="9" y="17" width="22" height="3" rx="1.5"/><rect x="9" y="24" width="26" height="3" rx="1.5"/></g>
+  <circle cx="34" cy="40" r="8" fill="currentColor"/>
+  <path d="M29 46l-3 11 8-4 8 4-3-11" fill="currentColor"/>
+</symbol>
+<symbol id="i-check" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="11" fill="currentColor" opacity=".18"/>
+  <path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<marker id="a-c" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4aa3ff"/></marker>
+<marker id="a-s" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2dd4bf"/></marker>
+<marker id="a-m" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8fa3c0"/></marker>
+<marker id="a-y" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+<marker id="a-p" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a3e635"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f43f5e"/></marker>
+<marker id="a-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#22c55e"/></marker>
+<marker id="a-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fb923c"/></marker>
+</defs>
+<rect width="1200" height="675" rx="24" fill="url(#bg)"/>
+<text x="48" y="64" class="h1" text-anchor="start" >Symmetric encryption: fast, but how do you share the key?</text><text x="48" y="96" class="sub" text-anchor="start" >One key encrypts and decrypts. Sending a copy over the same network gives it away.</text><use href="#i-browser" x="70" y="320" width="104" height="78" style="color:#4aa3ff" /><text x="122" y="430" class="lbl" text-anchor="middle" style="fill:#4aa3ff" >Browser</text><use href="#i-server" x="1050" y="310" width="66" height="88" style="color:#2dd4bf" /><text x="1083" y="430" class="lbl" text-anchor="middle" style="fill:#2dd4bf" >Bank server</text><line x1="200" y1="360" x2="1020" y2="360" stroke="#2f4c7a" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/><g class="k0"><use href="#i-key" x="92" y="252" width="64" height="28" style="color:#fbbf24" /><text x="124" y="242" class="sm" text-anchor="middle" style="fill:#fbbf24" >1. Browser creates the key</text></g><g transform="translate(200 320)"><g class="km"><use href="#i-key" x="0" y="-14" width="64" height="28" style="color:#fbbf24" /></g></g><text x="610" y="290" class="sm" text-anchor="middle" style="fill:#fbbf24" >2. A copy of the key travels to the server</text><use href="#i-eye" x="582" y="150" width="56" height="32" style="color:#f43f5e" /><text x="610" y="140" class="sm" text-anchor="middle" style="fill:#f43f5e" >Attacker on the network</text><g class="st"><use href="#i-key" x="660" y="148" width="54" height="24" style="color:#f43f5e" /><text x="726" y="166" class="sm b" text-anchor="start" style="fill:#f43f5e" >copied!</text></g><g transform="translate(200 400)"><g class="pm"><rect x="0" y="-18" width="220" height="36" rx="8" fill="#0f3a2a" stroke="#22c55e" stroke-width="2" /><use href="#i-lock" x="10" y="-11" width="18" height="22" style="color:#22c55e" /><text x="122" y="6" class="sm mono" text-anchor="middle" style="fill:#b7f7cf" >c41d 7e09 a3f2</text></g></g><text x="610" y="460" class="sm" text-anchor="middle" style="fill:#22c55e" >3. The encrypted password follows</text><g class="bb"><rect x="380" y="470" width="460" height="64" rx="14" fill="#2a0f1a" stroke="#f43f5e" stroke-width="2" /><use href="#i-unlock" x="400" y="482" width="30" height="38" style="color:#f43f5e" /><text x="640" y="498" class="sm" text-anchor="middle" style="fill:#ffd1da" >Attacker decrypts with the stolen key:</text><text x="640" y="522" class="lbl mono b" text-anchor="middle" style="fill:#f43f5e" >password = Sup3rS3cret!</text></g><text x="600" y="630" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Symmetric crypto (AES) is perfect for bulk data. It just needs a safe way to agree on the key.</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t d">
+<title id="t">HTTP vs HTTPS</title>
+<desc id="d">Animated comparison: over HTTP the password travels in clear text past the router and the internet provider; over HTTPS an eavesdropper only sees ciphertext.</desc>
+<style>
+text{font-family:'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;fill:#e6edf7}
+.mono{font-family:'Cascadia Code', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace}
+.muted{fill:#8fa3c0}
+.h1{font-size:34px;font-weight:700}
+.sub{font-size:18px;fill:#8fa3c0}
+.h2{font-size:20px;font-weight:600}
+.lbl{font-size:16px}
+.sm{font-size:14px}
+.xs{font-size:12.5px}
+.b{font-weight:700}
+
+.pkt{animation:pkt 9s linear infinite;transform:translateX(300px)}
+@keyframes pkt{0%{transform:translateX(0);opacity:0}4%{opacity:1}70%{transform:translateX(700px);opacity:1}78%,100%{transform:translateX(700px);opacity:0}}
+.bub{animation:bub 9s linear infinite}
+@keyframes bub{0%,27%{opacity:0}31%,86%{opacity:1}92%,100%{opacity:0}}
+
+@media (prefers-reduced-motion: reduce){ *{animation:none !important} }
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#0b1730"/><stop offset="1" stop-color="#132a50"/>
+</linearGradient>
+<symbol id="i-browser" viewBox="0 0 64 48">
+  <rect x="2" y="2" width="60" height="44" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <line x1="2" y1="14" x2="62" y2="14" stroke="currentColor" stroke-width="3"/>
+  <circle cx="10" cy="8" r="2.2" fill="currentColor"/><circle cx="17" cy="8" r="2.2" fill="currentColor"/><circle cx="24" cy="8" r="2.2" fill="currentColor"/>
+  <rect x="12" y="22" width="40" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+  <rect x="12" y="34" width="24" height="6" rx="3" fill="currentColor" opacity=".6"/>
+</symbol>
+<symbol id="i-server" viewBox="0 0 48 64">
+  <g fill="#132c52" stroke="currentColor" stroke-width="3">
+    <rect x="2" y="2" width="44" height="18" rx="4"/><rect x="2" y="23" width="44" height="18" rx="4"/><rect x="2" y="44" width="44" height="18" rx="4"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="11" cy="11" r="2.5"/><circle cx="11" cy="32" r="2.5"/><circle cx="11" cy="53" r="2.5"/>
+    <rect x="20" y="9.5" width="18" height="3" rx="1.5"/><rect x="20" y="30.5" width="18" height="3" rx="1.5"/><rect x="20" y="51.5" width="18" height="3" rx="1.5"/>
+  </g>
+</symbol>
+<symbol id="i-router" viewBox="0 0 64 44">
+  <line x1="16" y1="18" x2="10" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="48" y1="18" x2="54" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <rect x="2" y="18" width="60" height="24" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><circle cx="14" cy="30" r="2.5"/><circle cx="23" cy="30" r="2.5"/><circle cx="32" cy="30" r="2.5"/></g>
+</symbol>
+<symbol id="i-cloud" viewBox="0 0 72 46">
+  <path d="M18 43h37a14 14 0 0 0 2-28 20 20 0 0 0-38-3A15.5 15.5 0 0 0 18 43z" fill="#132c52" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+</symbol>
+<symbol id="i-eye" viewBox="0 0 56 32">
+  <path d="M2 16C12 3 44 3 54 16 44 29 12 29 2 16z" fill="#2a0f1a" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="28" cy="16" r="8" fill="currentColor"/><circle cx="28" cy="16" r="3.5" fill="#0b1730"/>
+</symbol>
+<symbol id="i-key" viewBox="0 0 64 28">
+  <circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="5"/>
+  <rect x="23" y="11" width="39" height="6" rx="2" fill="currentColor"/>
+  <rect x="45" y="16" width="5" height="9" rx="1" fill="currentColor"/><rect x="54" y="16" width="5" height="7" rx="1" fill="currentColor"/>
+</symbol>
+<symbol id="i-lock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 16 0v6" fill="none" stroke="currentColor" stroke-width="4"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-unlock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 15.5-2.8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-cert" viewBox="0 0 48 58">
+  <rect x="2" y="2" width="44" height="40" rx="4" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><rect x="9" y="10" width="30" height="3" rx="1.5"/><rect x="9" y="17" width="22" height="3" rx="1.5"/><rect x="9" y="24" width="26" height="3" rx="1.5"/></g>
+  <circle cx="34" cy="40" r="8" fill="currentColor"/>
+  <path d="M29 46l-3 11 8-4 8 4-3-11" fill="currentColor"/>
+</symbol>
+<symbol id="i-check" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="11" fill="currentColor" opacity=".18"/>
+  <path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<marker id="a-c" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4aa3ff"/></marker>
+<marker id="a-s" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2dd4bf"/></marker>
+<marker id="a-m" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8fa3c0"/></marker>
+<marker id="a-y" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+<marker id="a-p" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a3e635"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f43f5e"/></marker>
+<marker id="a-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#22c55e"/></marker>
+<marker id="a-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fb923c"/></marker>
+</defs>
+<rect width="1200" height="675" rx="24" fill="url(#bg)"/>
+<text x="48" y="64" class="h1" text-anchor="start" >HTTP vs HTTPS: what the network can read</text><text x="48" y="96" class="sub" text-anchor="start" >Same path, same eavesdroppers. Only TLS changes what they see.</text><rect x="48" y="130" width="210.4" height="32" rx="16" fill="#f43f5e" fill-opacity=".16" stroke="#f43f5e" stroke-width="1.5"/><text x="153.2" y="151.5" class="sm b" text-anchor="middle" style="fill:#f43f5e" >HTTP  ·  plain text</text><line x1="170" y1="258" x2="1010" y2="258" stroke="#2f4c7a" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/><use href="#i-browser" x="90.0" y="228.0" width="80" height="60" style="color:#4aa3ff" /><text x="130" y="316" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Your browser</text><use href="#i-router" x="325.0" y="230.5" width="80" height="55" style="color:#8fa3c0" /><text x="365" y="316" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Home router / Wi-Fi</text><use href="#i-cloud" x="600.0" y="226.0" width="100" height="64" style="color:#8fa3c0" /><text x="650" y="316" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Internet provider</text><use href="#i-server" x="1015.0" y="225.0" width="50" height="66" style="color:#2dd4bf" /><text x="1040" y="316" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Bank server</text><use href="#i-eye" x="492" y="146" width="56" height="32" style="color:#f43f5e" /><text x="520" y="138" class="xs" text-anchor="middle" style="fill:#f43f5e" >Eavesdropper</text><line x1="520" y1="180" x2="520" y2="234" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4 4"/><g class="bub"><rect x="570" y="136" width="400" height="40" rx="20" fill="#0d1d38" stroke="#f43f5e" stroke-width="1.5" /><text x="770" y="162" class="sm mono" text-anchor="middle" style="fill:#f43f5e" >Reads: password = Sup3rS3cret!</text></g><g transform="translate(105 258)"><g class="pkt"><rect x="0" y="-18" width="250" height="36" rx="8" fill="#3a0f1c" stroke="#f43f5e" stroke-width="2" /><text x="125" y="6" class="sm mono" text-anchor="middle" style="fill:#ffd1da" >password=Sup3rS3cret!</text></g></g><rect x="48" y="400" width="277.6" height="32" rx="16" fill="#22c55e" fill-opacity=".16" stroke="#22c55e" stroke-width="1.5"/><text x="186.8" y="421.5" class="sm b" text-anchor="middle" style="fill:#22c55e" >HTTPS  ·  encrypted by TLS</text><line x1="170" y1="528" x2="1010" y2="528" stroke="#2f4c7a" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/><use href="#i-browser" x="90.0" y="498.0" width="80" height="60" style="color:#4aa3ff" /><text x="130" y="586" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Your browser</text><use href="#i-router" x="325.0" y="500.5" width="80" height="55" style="color:#8fa3c0" /><text x="365" y="586" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Home router / Wi-Fi</text><use href="#i-cloud" x="600.0" y="496.0" width="100" height="64" style="color:#8fa3c0" /><text x="650" y="586" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Internet provider</text><use href="#i-server" x="1015.0" y="495.0" width="50" height="66" style="color:#2dd4bf" /><text x="1040" y="586" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Bank server</text><use href="#i-eye" x="492" y="416" width="56" height="32" style="color:#f43f5e" /><text x="520" y="408" class="xs" text-anchor="middle" style="fill:#f43f5e" >Eavesdropper</text><line x1="520" y1="450" x2="520" y2="504" stroke="#f43f5e" stroke-width="1.5" stroke-dasharray="4 4"/><g class="bub"><rect x="570" y="406" width="400" height="40" rx="20" fill="#0d1d38" stroke="#22c55e" stroke-width="1.5" /><text x="770" y="432" class="sm mono" text-anchor="middle" style="fill:#22c55e" >Reads: 9f2c e81a 44d0 b7c3 ... nothing useful</text></g><g transform="translate(105 528)"><g class="pkt"><rect x="0" y="-18" width="250" height="36" rx="8" fill="#0f3a2a" stroke="#22c55e" stroke-width="2" /><use href="#i-lock" x="10" y="-11" width="18" height="22" style="color:#22c55e" /><text x="138" y="6" class="sm mono" text-anchor="middle" style="fill:#b7f7cf" >9f2c e81a 44d0 b7c3</text></g></g>
+</svg>

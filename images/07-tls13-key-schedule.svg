@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" role="img" aria-labelledby="t d">
+<title id="t">TLS 1.3 key schedule</title>
+<desc id="d">The ECDHE shared secret goes through HKDF-Extract to give the handshake secret, which yields client and server handshake traffic secrets and keys. A second extraction gives the master secret, which yields client and server application traffic secrets and the session keys.</desc>
+<style>
+text{font-family:'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;fill:#e6edf7}
+.mono{font-family:'Cascadia Code', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace}
+.muted{fill:#8fa3c0}
+.h1{font-size:34px;font-weight:700}
+.sub{font-size:18px;fill:#8fa3c0}
+.h2{font-size:20px;font-weight:600}
+.lbl{font-size:16px}
+.sm{font-size:14px}
+.xs{font-size:12.5px}
+.b{font-weight:700}
+
+@media (prefers-reduced-motion: reduce){ *{animation:none !important} }
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#0b1730"/><stop offset="1" stop-color="#132a50"/>
+</linearGradient>
+<symbol id="i-browser" viewBox="0 0 64 48">
+  <rect x="2" y="2" width="60" height="44" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <line x1="2" y1="14" x2="62" y2="14" stroke="currentColor" stroke-width="3"/>
+  <circle cx="10" cy="8" r="2.2" fill="currentColor"/><circle cx="17" cy="8" r="2.2" fill="currentColor"/><circle cx="24" cy="8" r="2.2" fill="currentColor"/>
+  <rect x="12" y="22" width="40" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+  <rect x="12" y="34" width="24" height="6" rx="3" fill="currentColor" opacity=".6"/>
+</symbol>
+<symbol id="i-server" viewBox="0 0 48 64">
+  <g fill="#132c52" stroke="currentColor" stroke-width="3">
+    <rect x="2" y="2" width="44" height="18" rx="4"/><rect x="2" y="23" width="44" height="18" rx="4"/><rect x="2" y="44" width="44" height="18" rx="4"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="11" cy="11" r="2.5"/><circle cx="11" cy="32" r="2.5"/><circle cx="11" cy="53" r="2.5"/>
+    <rect x="20" y="9.5" width="18" height="3" rx="1.5"/><rect x="20" y="30.5" width="18" height="3" rx="1.5"/><rect x="20" y="51.5" width="18" height="3" rx="1.5"/>
+  </g>
+</symbol>
+<symbol id="i-router" viewBox="0 0 64 44">
+  <line x1="16" y1="18" x2="10" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="48" y1="18" x2="54" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <rect x="2" y="18" width="60" height="24" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><circle cx="14" cy="30" r="2.5"/><circle cx="23" cy="30" r="2.5"/><circle cx="32" cy="30" r="2.5"/></g>
+</symbol>
+<symbol id="i-cloud" viewBox="0 0 72 46">
+  <path d="M18 43h37a14 14 0 0 0 2-28 20 20 0 0 0-38-3A15.5 15.5 0 0 0 18 43z" fill="#132c52" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+</symbol>
+<symbol id="i-eye" viewBox="0 0 56 32">
+  <path d="M2 16C12 3 44 3 54 16 44 29 12 29 2 16z" fill="#2a0f1a" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="28" cy="16" r="8" fill="currentColor"/><circle cx="28" cy="16" r="3.5" fill="#0b1730"/>
+</symbol>
+<symbol id="i-key" viewBox="0 0 64 28">
+  <circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="5"/>
+  <rect x="23" y="11" width="39" height="6" rx="2" fill="currentColor"/>
+  <rect x="45" y="16" width="5" height="9" rx="1" fill="currentColor"/><rect x="54" y="16" width="5" height="7" rx="1" fill="currentColor"/>
+</symbol>
+<symbol id="i-lock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 16 0v6" fill="none" stroke="currentColor" stroke-width="4"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-unlock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 15.5-2.8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-cert" viewBox="0 0 48 58">
+  <rect x="2" y="2" width="44" height="40" rx="4" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><rect x="9" y="10" width="30" height="3" rx="1.5"/><rect x="9" y="17" width="22" height="3" rx="1.5"/><rect x="9" y="24" width="26" height="3" rx="1.5"/></g>
+  <circle cx="34" cy="40" r="8" fill="currentColor"/>
+  <path d="M29 46l-3 11 8-4 8 4-3-11" fill="currentColor"/>
+</symbol>
+<symbol id="i-check" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="11" fill="currentColor" opacity=".18"/>
+  <path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<marker id="a-c" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4aa3ff"/></marker>
+<marker id="a-s" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2dd4bf"/></marker>
+<marker id="a-m" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8fa3c0"/></marker>
+<marker id="a-y" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+<marker id="a-p" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a3e635"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f43f5e"/></marker>
+<marker id="a-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#22c55e"/></marker>
+<marker id="a-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fb923c"/></marker>
+</defs>
+<rect width="1200" height="720" rx="24" fill="url(#bg)"/>
+<text x="48" y="64" class="h1" text-anchor="start" >From one shared secret to many keys</text><text x="48" y="96" class="sub" text-anchor="start" >The TLS 1.3 key schedule (simplified): one-way derivations, separate keys per phase and per direction</text><rect x="48" y="140" width="220" height="60" rx="10" fill="#0f2343" stroke="#8fa3c0" stroke-width="2" /><text x="158.0" y="168.0" class="sm b" text-anchor="middle" style="fill:#8fa3c0" >Early Secret</text><text x="158.0" y="188.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >no pre-shared key: zeros</text><rect x="48" y="260" width="220" height="70" rx="10" fill="#2b230c" stroke="#fbbf24" stroke-width="2" /><text x="158.0" y="293.0" class="sm b" text-anchor="middle" style="fill:#fbbf24" >ECDHE shared secret</text><text x="158.0" y="313.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >a·B = b·A</text><rect x="318" y="260" width="150" height="70" rx="10" fill="#0f2343" stroke="#8fa3c0" stroke-width="2" /><text x="393.0" y="301.0" class="sm b" text-anchor="middle" style="fill:#8fa3c0" >HKDF-Extract</text><rect x="518" y="260" width="190" height="70" rx="10" fill="#2b230c" stroke="#fbbf24" stroke-width="2" /><text x="613.0" y="301.0" class="sm b" text-anchor="middle" style="fill:#fbbf24" >Handshake Secret</text><rect x="758" y="210" width="190" height="70" rx="10" fill="#0f2343" stroke="#4aa3ff" stroke-width="2" /><text x="853.0" y="243.0" class="sm b" text-anchor="middle" style="fill:#4aa3ff" >client hs traffic</text><text x="853.0" y="263.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >secret</text><rect x="758" y="310" width="190" height="70" rx="10" fill="#0f2343" stroke="#2dd4bf" stroke-width="2" /><text x="853.0" y="343.0" class="sm b" text-anchor="middle" style="fill:#2dd4bf" >server hs traffic</text><text x="853.0" y="363.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >secret</text><rect x="998" y="210" width="160" height="70" rx="10" fill="#0f2343" stroke="#4aa3ff" stroke-width="2" /><text x="1078.0" y="243.0" class="sm b" text-anchor="middle" style="fill:#4aa3ff" >key + IV</text><text x="1078.0" y="263.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >client → server { }</text><rect x="998" y="310" width="160" height="70" rx="10" fill="#0f2343" stroke="#2dd4bf" stroke-width="2" /><text x="1078.0" y="343.0" class="sm b" text-anchor="middle" style="fill:#2dd4bf" >key + IV</text><text x="1078.0" y="363.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >server → client { }</text><path d="M268 295 L316 295" stroke="#fbbf24" stroke-width="2" fill="none" marker-end="url(#a-y)"/><path d="M468 295 L516 295" stroke="#8fa3c0" stroke-width="2" fill="none" marker-end="url(#a-m)"/><path d="M158 200 V230 H393 V258" stroke="#8fa3c0" stroke-width="2" fill="none" marker-end="url(#a-m)"/><text x="276" y="224" class="xs" text-anchor="middle" style="fill:#8fa3c0" >"derived" = salt</text><path d="M708 285 L756 245" stroke="#8fa3c0" stroke-width="2" fill="none" marker-end="url(#a-m)"/><path d="M708 305 L756 345" stroke="#8fa3c0" stroke-width="2" fill="none" marker-end="url(#a-m)"/><path d="M948 245 L996 245" stroke="#4aa3ff" stroke-width="2" fill="none" marker-end="url(#a-c)"/><path d="M948 345 L996 345" stroke="#2dd4bf" stroke-width="2" fill="none" marker-end="url(#a-s)"/><text x="853" y="402" class="xs" text-anchor="middle" style="fill:#8fa3c0" >+ transcript hash (ClientHello … ServerHello)</text><rect x="318" y="500" width="150" height="70" rx="10" fill="#0f2343" stroke="#8fa3c0" stroke-width="2" /><text x="393.0" y="533.0" class="sm b" text-anchor="middle" style="fill:#8fa3c0" >HKDF-Extract</text><text x="393.0" y="553.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >input = zeros</text><rect x="518" y="500" width="190" height="70" rx="10" fill="#2b230c" stroke="#fbbf24" stroke-width="2" /><text x="613.0" y="541.0" class="sm b" text-anchor="middle" style="fill:#fbbf24" >Master Secret</text><rect x="758" y="450" width="190" height="70" rx="10" fill="#0f2343" stroke="#4aa3ff" stroke-width="2" /><text x="853.0" y="483.0" class="sm b" text-anchor="middle" style="fill:#4aa3ff" >client app traffic</text><text x="853.0" y="503.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >secret</text><rect x="758" y="550" width="190" height="70" rx="10" fill="#0f2343" stroke="#2dd4bf" stroke-width="2" /><text x="853.0" y="583.0" class="sm b" text-anchor="middle" style="fill:#2dd4bf" >server app traffic</text><text x="853.0" y="603.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >secret</text><rect x="998" y="450" width="160" height="70" rx="10" fill="#0f2343" stroke="#4aa3ff" stroke-width="2" /><text x="1078.0" y="483.0" class="sm b" text-anchor="middle" style="fill:#4aa3ff" >session key + IV</text><text x="1078.0" y="503.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >client → server [ ]</text><rect x="998" y="550" width="160" height="70" rx="10" fill="#0f2343" stroke="#2dd4bf" stroke-width="2" /><text x="1078.0" y="583.0" class="sm b" text-anchor="middle" style="fill:#2dd4bf" >session key + IV</text><text x="1078.0" y="603.0" class="xs" text-anchor="middle" style="fill:#8fa3c0" >server → client [ ]</text><path d="M613 330 V370 H393 V498" stroke="#8fa3c0" stroke-width="2" fill="none" marker-end="url(#a-m)"/><text x="500" y="388" class="xs" text-anchor="middle" style="fill:#8fa3c0" >"derived" = salt</text><path d="M468 535 L516 535" stroke="#8fa3c0" stroke-width="2" fill="none" marker-end="url(#a-m)"/><path d="M708 525 L756 485" stroke="#8fa3c0" stroke-width="2" fill="none" marker-end="url(#a-m)"/><path d="M708 545 L756 585" stroke="#8fa3c0" stroke-width="2" fill="none" marker-end="url(#a-m)"/><path d="M948 485 L996 485" stroke="#4aa3ff" stroke-width="2" fill="none" marker-end="url(#a-c)"/><path d="M948 585 L996 585" stroke="#2dd4bf" stroke-width="2" fill="none" marker-end="url(#a-s)"/><text x="853" y="642" class="xs" text-anchor="middle" style="fill:#8fa3c0" >+ transcript hash (ClientHello … server Finished)</text><rect x="48" y="400" width="240" height="150" rx="12" fill="#0f2343" stroke="#2f4c7a" stroke-width="1.5" /><text x="64" y="426" class="sm b" text-anchor="start" >Why it matters</text><text x="64" y="450" class="xs" text-anchor="start" style="fill:#8fa3c0" >Each key is derived one way:</text><text x="64" y="470" class="xs" text-anchor="start" style="fill:#8fa3c0" >leaking one key does not</text><text x="64" y="490" class="xs" text-anchor="start" style="fill:#8fa3c0" >reveal the secret behind it.</text><text x="64" y="510" class="xs" text-anchor="start" style="fill:#8fa3c0" >Transcript hash binds keys</text><text x="64" y="530" class="xs" text-anchor="start" style="fill:#8fa3c0" >to this exact handshake.</text><text x="600" y="690" class="xs" text-anchor="middle" style="fill:#8fa3c0" >HKDF = HMAC-based Key Derivation Function (RFC 5869). Exact labels: RFC 8446 section 7.1. Byte-level walkthrough: tls13.xargs.org</text>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t d">
+<title id="t">ECDHE key exchange</title>
+<desc id="d">Animated: browser and server each create a random private key and send only the matching public key. Each combines its private key with the other's public key and both get the same shared secret, which never crosses the network.</desc>
+<style>
+text{font-family:'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;fill:#e6edf7}
+.mono{font-family:'Cascadia Code', Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace}
+.muted{fill:#8fa3c0}
+.h1{font-size:34px;font-weight:700}
+.sub{font-size:18px;fill:#8fa3c0}
+.h2{font-size:20px;font-weight:600}
+.lbl{font-size:16px}
+.sm{font-size:14px}
+.xs{font-size:12.5px}
+.b{font-weight:700}
+@keyframes e1{0%,2%{opacity:0;transform:translate(0,10px)}8%,95%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+@keyframes e2{0%,12%{opacity:0;transform:translate(0,10px)}18%,95%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+@keyframes ea{0%,22%{transform:translateX(0);opacity:0}24%{opacity:1}44%{transform:translateX(420px);opacity:1}48%,100%{transform:translateX(420px);opacity:0}}
+@keyframes eb{0%,22%{transform:translateX(0);opacity:0}24%{opacity:1}44%{transform:translateX(-420px);opacity:1}48%,100%{transform:translateX(-420px);opacity:0}}
+@keyframes e3{0%,36%{opacity:0;transform:translate(0,10px)}42%,95%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+@keyframes e4{0%,52%{opacity:0;transform:translate(0,10px)}60%,95%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+@keyframes e5{0%,66%{opacity:0;transform:translate(0,10px)}74%,95%{opacity:1;transform:translate(0,0)}100%{opacity:0}}
+.e1{animation:e1 12s infinite}.e2{animation:e2 12s infinite}.ea{animation:ea 12s linear infinite;transform:translateX(210px)}.eb{animation:eb 12s linear infinite;transform:translateX(-210px)}.e3{animation:e3 12s infinite}.e4{animation:e4 12s infinite}.e5{animation:e5 12s infinite}
+@media (prefers-reduced-motion: reduce){ *{animation:none !important} }
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#0b1730"/><stop offset="1" stop-color="#132a50"/>
+</linearGradient>
+<symbol id="i-browser" viewBox="0 0 64 48">
+  <rect x="2" y="2" width="60" height="44" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <line x1="2" y1="14" x2="62" y2="14" stroke="currentColor" stroke-width="3"/>
+  <circle cx="10" cy="8" r="2.2" fill="currentColor"/><circle cx="17" cy="8" r="2.2" fill="currentColor"/><circle cx="24" cy="8" r="2.2" fill="currentColor"/>
+  <rect x="12" y="22" width="40" height="8" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+  <rect x="12" y="34" width="24" height="6" rx="3" fill="currentColor" opacity=".6"/>
+</symbol>
+<symbol id="i-server" viewBox="0 0 48 64">
+  <g fill="#132c52" stroke="currentColor" stroke-width="3">
+    <rect x="2" y="2" width="44" height="18" rx="4"/><rect x="2" y="23" width="44" height="18" rx="4"/><rect x="2" y="44" width="44" height="18" rx="4"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="11" cy="11" r="2.5"/><circle cx="11" cy="32" r="2.5"/><circle cx="11" cy="53" r="2.5"/>
+    <rect x="20" y="9.5" width="18" height="3" rx="1.5"/><rect x="20" y="30.5" width="18" height="3" rx="1.5"/><rect x="20" y="51.5" width="18" height="3" rx="1.5"/>
+  </g>
+</symbol>
+<symbol id="i-router" viewBox="0 0 64 44">
+  <line x1="16" y1="18" x2="10" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <line x1="48" y1="18" x2="54" y2="3" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <rect x="2" y="18" width="60" height="24" rx="6" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><circle cx="14" cy="30" r="2.5"/><circle cx="23" cy="30" r="2.5"/><circle cx="32" cy="30" r="2.5"/></g>
+</symbol>
+<symbol id="i-cloud" viewBox="0 0 72 46">
+  <path d="M18 43h37a14 14 0 0 0 2-28 20 20 0 0 0-38-3A15.5 15.5 0 0 0 18 43z" fill="#132c52" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+</symbol>
+<symbol id="i-eye" viewBox="0 0 56 32">
+  <path d="M2 16C12 3 44 3 54 16 44 29 12 29 2 16z" fill="#2a0f1a" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="28" cy="16" r="8" fill="currentColor"/><circle cx="28" cy="16" r="3.5" fill="#0b1730"/>
+</symbol>
+<symbol id="i-key" viewBox="0 0 64 28">
+  <circle cx="14" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="5"/>
+  <rect x="23" y="11" width="39" height="6" rx="2" fill="currentColor"/>
+  <rect x="45" y="16" width="5" height="9" rx="1" fill="currentColor"/><rect x="54" y="16" width="5" height="7" rx="1" fill="currentColor"/>
+</symbol>
+<symbol id="i-lock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 16 0v6" fill="none" stroke="currentColor" stroke-width="4"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-unlock" viewBox="0 0 32 40">
+  <path d="M8 18V12a8 8 0 0 1 15.5-2.8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  <rect x="3" y="18" width="26" height="20" rx="4" fill="currentColor"/>
+  <circle cx="16" cy="26.5" r="3" fill="#0b1730"/><rect x="14.5" y="27" width="3" height="6" fill="#0b1730"/>
+</symbol>
+<symbol id="i-cert" viewBox="0 0 48 58">
+  <rect x="2" y="2" width="44" height="40" rx="4" fill="#132c52" stroke="currentColor" stroke-width="3"/>
+  <g fill="currentColor"><rect x="9" y="10" width="30" height="3" rx="1.5"/><rect x="9" y="17" width="22" height="3" rx="1.5"/><rect x="9" y="24" width="26" height="3" rx="1.5"/></g>
+  <circle cx="34" cy="40" r="8" fill="currentColor"/>
+  <path d="M29 46l-3 11 8-4 8 4-3-11" fill="currentColor"/>
+</symbol>
+<symbol id="i-check" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="11" fill="currentColor" opacity=".18"/>
+  <path d="M6.5 12.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+<marker id="a-c" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4aa3ff"/></marker>
+<marker id="a-s" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2dd4bf"/></marker>
+<marker id="a-m" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8fa3c0"/></marker>
+<marker id="a-y" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fbbf24"/></marker>
+<marker id="a-p" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a3e635"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f43f5e"/></marker>
+<marker id="a-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#22c55e"/></marker>
+<marker id="a-o" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#fb923c"/></marker>
+</defs>
+<rect width="1200" height="675" rx="24" fill="url(#bg)"/>
+<text x="48" y="64" class="h1" text-anchor="start" >ECDHE: agreeing on a secret without ever sending it</text><text x="48" y="96" class="sub" text-anchor="start" >Ephemeral Elliptic Curve Diffie-Hellman, the key exchange behind every full TLS 1.3 handshake</text><rect x="48" y="130" width="300" height="400" rx="16" fill="#0f2343" stroke="#4aa3ff" stroke-width="2" /><rect x="852" y="130" width="300" height="400" rx="16" fill="#0f2343" stroke="#2dd4bf" stroke-width="2" /><use href="#i-browser" x="70" y="150" width="56" height="42" style="color:#4aa3ff" /><text x="140" y="180" class="h2" text-anchor="start" style="fill:#4aa3ff" >Browser</text><use href="#i-server" x="1100" y="146" width="34" height="46" style="color:#2dd4bf" /><text x="1086" y="180" class="h2" text-anchor="end" style="fill:#2dd4bf" >Bank server</text><g class="e1"><rect x="68" y="215" width="260" height="64" rx="12" fill="#2b1a0c" stroke="#fb923c" stroke-width="1.5" /><use href="#i-key" x="82" y="233" width="56" height="26" style="color:#fb923c" /><text x="150" y="243" class="lbl b mono" text-anchor="start" style="fill:#fb923c" >private a</text><text x="150" y="265" class="xs" text-anchor="start" style="fill:#8fa3c0" >random, stays here</text><rect x="872" y="215" width="260" height="64" rx="12" fill="#2b1a0c" stroke="#fb923c" stroke-width="1.5" /><use href="#i-key" x="886" y="233" width="56" height="26" style="color:#fb923c" /><text x="954" y="243" class="lbl b mono" text-anchor="start" style="fill:#fb923c" >private b</text><text x="954" y="265" class="xs" text-anchor="start" style="fill:#8fa3c0" >random, stays here</text></g><g class="e2"><rect x="68" y="296" width="260" height="64" rx="12" fill="#1b2a0c" stroke="#a3e635" stroke-width="1.5" /><use href="#i-key" x="82" y="314" width="56" height="26" style="color:#a3e635" /><text x="150" y="324" class="lbl b mono" text-anchor="start" style="fill:#a3e635" >public A = a·G</text><text x="150" y="346" class="xs" text-anchor="start" style="fill:#8fa3c0" >derived from a</text><rect x="872" y="296" width="260" height="64" rx="12" fill="#1b2a0c" stroke="#a3e635" stroke-width="1.5" /><use href="#i-key" x="886" y="314" width="56" height="26" style="color:#a3e635" /><text x="954" y="324" class="lbl b mono" text-anchor="start" style="fill:#a3e635" >public B = b·G</text><text x="954" y="346" class="xs" text-anchor="start" style="fill:#8fa3c0" >derived from b</text></g><line x1="350" y1="420" x2="850" y2="420" stroke="#2f4c7a" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/><g transform="translate(355 398)"><g class="ea"><rect x="0" y="-16" width="80" height="32" rx="16" fill="#1b2a0c" stroke="#a3e635" stroke-width="1.5" /><text x="40" y="6" class="lbl b mono" text-anchor="middle" style="fill:#a3e635" >A →</text></g></g><g transform="translate(765 446)"><g class="eb"><rect x="0" y="-16" width="80" height="32" rx="16" fill="#1b2a0c" stroke="#a3e635" stroke-width="1.5" /><text x="40" y="6" class="lbl b mono" text-anchor="middle" style="fill:#a3e635" >← B</text></g></g><text x="600" y="486" class="sm" text-anchor="middle" style="fill:#8fa3c0" >Only A and B cross the network</text><g class="e3"><use href="#i-eye" x="572" y="300" width="56" height="32" style="color:#f43f5e" /><rect x="460" y="220" width="280" height="62" rx="14" fill="#2a0f1a" stroke="#f43f5e" stroke-width="1.5" /><text x="600" y="246" class="sm" text-anchor="middle" style="fill:#ffd1da" >Sees A and B, but cannot</text><text x="600" y="268" class="sm" text-anchor="middle" style="fill:#ffd1da" >compute the secret from them</text></g><g class="e4"><rect x="68" y="440" width="260" height="74" rx="12" fill="#2b230c" stroke="#fbbf24" stroke-width="2" /><use href="#i-key" x="82" y="462" width="56" height="26" style="color:#fbbf24" /><text x="150" y="470" class="lbl b mono" text-anchor="start" style="fill:#fbbf24" >a·B = S</text><text x="150" y="494" class="xs" text-anchor="start" style="fill:#8fa3c0" >shared secret</text><rect x="872" y="440" width="260" height="74" rx="12" fill="#2b230c" stroke="#fbbf24" stroke-width="2" /><use href="#i-key" x="886" y="462" width="56" height="26" style="color:#fbbf24" /><text x="954" y="470" class="lbl b mono" text-anchor="start" style="fill:#fbbf24" >b·A = S</text><text x="954" y="494" class="xs" text-anchor="start" style="fill:#8fa3c0" >same shared secret</text></g><g class="e5"><rect x="240" y="560" width="720" height="82" rx="14" fill="#1d2a3f" stroke="#fbbf24" stroke-width="1.5" /><text x="600" y="590" class="sm mono" text-anchor="middle" style="fill:#fbbf24" >a·B = a·b·G = b·a·G = b·A   (curve X25519, or X25519MLKEM768 for post-quantum)</text><text x="600" y="620" class="sm" text-anchor="middle" style="fill:#e6edf7" >a and b are thrown away after the connection: this is forward secrecy</text></g>
+</svg>
