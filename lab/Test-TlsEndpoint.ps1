@@ -25,6 +25,9 @@
     .\Test-TlsEndpoint.ps1 -HostName mystorage.blob.core.windows.net -TestAllProtocols
 
 .NOTES
+    Written by Olivier Lumeau
+    https://github.com/Solisys-Cloud/tls13-explained
+
     PowerShell 7+ recommended: it also shows the negotiated cipher suite.
     TLS 1.3 needs Windows 11 or Windows Server 2022 and later (or a recent OpenSSL on Linux and macOS).
     A "Refused" result can come from the server OR from your own client if that version is disabled locally.

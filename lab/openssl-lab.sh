@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# Written by Olivier Lumeau
+# https://github.com/Solisys-Cloud/tls13-explained
 # TLS 1.3 lab with openssl (Linux, macOS, WSL or Git Bash on Windows)
 # Usage: ./openssl-lab.sh www.solisys.be
 # Read-only: it only opens TLS connections.

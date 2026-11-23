@@ -19,6 +19,9 @@
     .\Find-AzureLegacyTls.ps1 -SkipWebApps | Export-Csv .\legacy-tls.csv -NoTypeInformation
 
 .NOTES
+    Written by Olivier Lumeau
+    https://github.com/Solisys-Cloud/tls13-explained
+
     Requires the Az.Accounts, Az.ResourceGraph and Az.Websites modules and Reader access.
     Resource Graph covers the subscriptions visible in your current context.
 #>

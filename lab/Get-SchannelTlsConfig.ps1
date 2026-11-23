@@ -18,6 +18,9 @@
     Invoke-Command -ComputerName SRV-ENTRACONNECT01 -FilePath .\Get-SchannelTlsConfig.ps1
 
 .NOTES
+    Written by Olivier Lumeau
+    https://github.com/Solisys-Cloud/tls13-explained
+
     Run as administrator on Windows. For Microsoft Entra Connect, Microsoft also ships
     Get-ADSyncToolsTls12 and Set-ADSyncToolsTls12 in the ADSyncTools module.
 #>
